@@ -1664,7 +1664,7 @@ function getTableColumns(settings) {
         Object.keys(firstRow_1)
             .filter(function (key) { return key !== '_element'; })
             .forEach(function (key) {
-            var colSpan = firstRow_1[key].colSpan || 1;
+            var colSpan = firstRow_1[key] && firstRow_1[key].colSpan ? firstRow_1[key].colSpan : 1;
             for (var i = 0; i < colSpan; i++) {
                 var id = void 0;
                 if (Array.isArray(firstRow_1)) {
